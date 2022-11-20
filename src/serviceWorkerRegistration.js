@@ -26,10 +26,12 @@ export function register(config) {
         // Add some additional logging to localhost, pointing developers to the
         // service worker/PWA documentation.
         navigator.serviceWorker.ready.then(() => {
+          console.log("Servis worker instalado")
           console.log(
             "This web app is being served cache-first by a service " +
               "worker. To learn more, visit https://cra.link/PWA"
           );
+  
         });
       } else {
         // Is not localhost. Just register service worker
@@ -49,6 +51,7 @@ function registerValidSW(swUrl, config) {
         }
         installingWorker.onstatechange = () => {
           if (installingWorker.state === "installed") {
+            console.log("Estoy instalado")
             if (navigator.serviceWorker.controller) {
               // At this point, the updated precached content has been fetched,
               // but the previous service worker will still serve the older
